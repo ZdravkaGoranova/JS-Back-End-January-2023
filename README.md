@@ -6,3 +6,11 @@
 • Modules;
 • Request and Response Wrapper;
 • Node.js Web Server.
+
+2.Node.js Streams and Utilities
+
+• Streams;
+• Pub/Sub Pattern;
+• Events;
+• FS Module;
+• Debugging.
