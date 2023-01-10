@@ -7,7 +7,7 @@
 • Request and Response Wrapper;
 • Node.js Web Server.
 
-2.Node.js Streams and Utilities
+# 2.Node.js Streams and Utilities
 
 • Streams;
 • Pub/Sub Pattern;
@@ -15,14 +15,14 @@
 • FS Module;
 • Debugging.
 
-3.ExpressJS and Templating
+# 3.ExpressJS and Templating
 
 • Express;
 • View Engines (handlebars).
 
-4.Workshop: ExpressJS and Templating
+# 4.Workshop: ExpressJS and Templating
 
-5.NoSQL and MongoDB
+# 5.NoSQL and MongoDB
 
 • Relational and Non-Relational;
 • MongoDB and Mongoose Overview;
@@ -30,23 +30,23 @@
 • CRUD with Mongoose;
 • Mongoose Querying.
 
-6.Workshop: MongoDB and Mongoose
+# 6.Workshop: MongoDB and Mongoose
 
-7.Session and Authentication
+# 7.Session and Authentication
 
 • Cookies and Sessions;
 • Authentication Concepts;
 • JSON Web Token.
 
-8.Workshop: Session and Authentication
+# 8.Workshop: Session and Authentication
 
-9.Validation and Error Handling
+# 9.Validation and Error Handling
 
 • Validation (why and how, mongoose validation);
 • Error Handling.
 
-10.Exam Preparation
+# 10.Exam Preparation
 
-11.Workshop: REST API
+# 11.Workshop: REST API
 
-12.Regular Exam
+# 12.Regular Exam
