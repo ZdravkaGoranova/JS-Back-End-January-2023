@@ -25,7 +25,10 @@ app.get('/cats', (req, res) => {
 });
 
 app.get('/cats/1', (req, res) => {
-    res.download('./cat.jpg');
+    //res.download('./cat.jpg');//browser да го изтегли локално ;има автоматично  end накрая 
+    res.sendFile('./cat.jpg', { root: __dirname });//отваря в browser
+    //res.attachment('./cat.jpg');//withhaout edn();
+
 });
 app.get('/cats/:catId', (req, res) => {
     console.log(req.params);
@@ -41,7 +44,7 @@ app.get('/json', (req, res) => {
     res.json({ ok: true, message: 'Hello from JSON' })
 })
 
-app.get('/redirect', (req,res) => {
+app.get('/redirect', (req, res) => {
     res.redirect('/rediredtedddd');
 })
 
