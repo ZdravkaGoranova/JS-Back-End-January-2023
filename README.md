@@ -40,7 +40,7 @@
 
 ## 8.Workshop: Session and Authentication
 
-##9.Validation and Error Handling
+## 9.Validation and Error Handling
 
 • Validation (why and how, mongoose validation);
 • Error Handling.
