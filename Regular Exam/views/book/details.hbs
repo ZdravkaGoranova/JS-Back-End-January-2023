@@ -1,0 +1,122 @@
+<main>
+    <div class="container">
+        <div class="col-9">
+
+            <!-- Start Pet Photo Post Section -->
+            <div class="card">
+                <div class="top">
+
+                    <!-- Start User Details and Image Location Section -->
+                    <div class="userDetails">
+
+                        <!-- Link to User Profile Details Page-->
+                        <div>
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="/static/images/person.png" alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>
+
+                            <!-- Link to User Profile Details Page -->
+                            <p>
+                                <!-- User's username -->
+                                {{userData.username}}
+                                {{pet.owner.username}}
+                            </p>
+                            <!-- photo's location -->
+                            <span>{{pet.location}}</span>
+
+                            <!-- IF the viewer is the creator of the photo -->
+                            {{#if isOwner}}
+                            <div class="edit-delete-btns">
+
+                                <!-- Edit Pet Photo -->
+                                <a href="/petstagrams/{{pet._id}}/edit">
+                                    <img class="edit-img" src="/static/images/edit-pen-icon-6.jpg" alt="edit button">
+                                </a>
+
+                                <!--Delete Pet Photo -->
+                                <a href="/petstagrams/{{pet._id}}/delete">
+                                    <img class="bin-img" src="/static/images/icon-remove-22.jpg" alt="bin button">
+                                </a>
+
+                            </div>
+
+                            {{/if}}
+
+                        </h3>
+                    </div>
+
+                </div>
+
+                <!-- Start Pet Photo -->
+                <div class="imgBx">
+                    <!-- Pet Photo -->
+                    <img src="{{pet.image}}" alt="post" class="cover">
+                </div>
+
+
+
+                <div class="bottom">
+
+                    <p class="message">
+                        <b class="petDescription">{{pet.description}}</b>
+                    </p>
+
+
+                    <!-- Photo description -->
+                    <div class="pet-details">
+                        <p class="petName">Name: {{pet.name}}</p>
+                        <p class="petAge">Age: {{pet.age}}</p>
+                    </div>
+                    <div class="comments">
+                        <div class="comments-top">
+                            {{#each pet.commentList}}
+
+                            <div class="userDetails">
+                                <div class="comment-data">
+                                    <div class="profilepic">
+                                        <div class="profile_img">
+                                            <div class="image">
+                                                <!-- User Profile Image -->
+                                                <img src="/static/images/person.png" alt="img8">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--User's username-->
+                           
+                                    <p><b>{{userId.username}}</b>- {{comment}}</p>
+
+                                </div>
+                            </div>
+                            {{/each}}
+
+                        </div>
+                    </div>
+                </div>
+
+                {{#if isAuthenticated}}
+                {{#if canComment}}
+
+                <div class="addComments">
+                    <!-- Start Add Comments Form -->
+                    <form method="POST" >
+                        <textarea id="comment-textarea" name="" cols="40" rows="10"
+                            placeholder="Add comment..."></textarea>
+                        <!-- Post Comments Button -->
+                        <button type="submit">Post</button>
+                    </form>
+                </div>
+
+                {{/if}}
+                {{/if}}
+
+            </div>
+        </div>
+    </div>
+</main>
